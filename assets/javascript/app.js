@@ -5,9 +5,9 @@ var number = 10;
 $("button").on("click", function() {
     var url = "http://api.giphy.com/v1/gifs/search?q=";
     var apiKey = "&api_key=VuemM9qnf1AxAVeW5yvUVDSa1KQACfl3&limit=10";
-    var queryUrl = url + searchTerm + apiKey;
     //this tracks the "data-value" of the button that was clicked.
     var searchTerm=$(this).attr("data-value");
+    var queryUrl = url + searchTerm + apiKey;
 
     $.ajax({
         url: queryUrl,
@@ -21,7 +21,7 @@ $("button").on("click", function() {
 
             var image = $("<img>");
             image.attr("src", response.data[i].images.fixed_height.url);
-            
+
             gifDiv.prepend(image);
             $("#gifDiv").prepend(gifDiv);
         }
