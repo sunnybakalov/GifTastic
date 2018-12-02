@@ -1,6 +1,22 @@
 var topics = ["soccer", "football", "basketball", "baseball", "volleyball", "kobe", "gym fail", "dunk", "sports fail", "lebron james", "ronaldo", "funny sports", "do you even lift", "usain bolt", "lance stephenson"]
 var number = 10;
 
+//the function that generates our buttons
+function generateButtons(){
+    //grabbing the Buttons div on the HTML page
+    var buttonDiv = $("#buttons");
+    //for loop that goes through the topics array and creates buttons
+    for (var i = 0; i < topics.length; i++) {
+        var gifButton = $("<button>");
+        gifButton.addClass("gifButton");
+        gifButton.attr("data-value", topics[i]);
+        gifButton.text(topics[i]);
+        $("#buttons").append(gifButton);
+    }
+}
+
+generateButtons();
+
 //the function that tracks button clicks
 $("button").on("click", function() {
     var url = "http://api.giphy.com/v1/gifs/search?q=";
