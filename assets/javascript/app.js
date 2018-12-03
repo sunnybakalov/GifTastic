@@ -1,3 +1,4 @@
+$(document).ready(function() {
 var topics = [
   "soccer",
   "football",
@@ -27,7 +28,7 @@ function generateButtons() {
     gifButton.addClass("gifButton");
     gifButton.attr("data-value", topics[i]);
     gifButton.text(topics[i]);
-    $("#buttons").append(gifButton);
+    $(".gifButton").append(gifButton);
   }
 }
 
@@ -38,7 +39,9 @@ $("button").on("click", function() {
 
   //this tracks the "data-value" of the button that was clicked.
   var searchTerm = $(this).attr("data-value");
-  var queryUrl = "http://api.giphy.com/v1/gifs/search?q=" + searchTerm + "&api_key=VuemM9qnf1AxAVeW5yvUVDSa1KQACfl3&limit=10";
+  //this removes white spaces between two word strings
+  var userSearch = searchTerm.replace(/ +/g, "+");
+  var queryUrl = "http://api.giphy.com/v1/gifs/search?q=" + userSearch + "&api_key=VuemM9qnf1AxAVeW5yvUVDSa1KQACfl3&limit=10";
 
   $.ajax({
     url: queryUrl,
@@ -49,7 +52,7 @@ $("button").on("click", function() {
     var results = response.data;
     //for loop that will produce 10 gifs at once
     for (var i = 0; i < results.length; i++) {
-      var image = $("<img>");
+      var image = $("<img class='picture'>");
       image.attr("src", results[i].images.fixed_height_still.url);
       image.attr({
         "data-animate": results[i].images.fixed_height.url,
@@ -63,7 +66,7 @@ $("button").on("click", function() {
 });
 
 //the image click function. currently not working.
-$("img").on("click", function() {
+$(".picture").on("click", function() {
   var state = $(this).attr("data-state");
   console.log(state);
   if (state === "still") {
@@ -90,3 +93,5 @@ $("#newButton").on("click", function(event) {
   
   generateButtons();
 });
+
+}
