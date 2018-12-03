@@ -1,4 +1,4 @@
-$(document).ready(function() {
+// $(document).ready(function() {
 var topics = [
   "soccer",
   "football",
@@ -16,7 +16,6 @@ var topics = [
   "usain bolt",
   "lance stephenson"
 ];
-var number = 10;
 
 //the function that generates our buttons
 function generateButtons() {
@@ -85,13 +84,12 @@ $(".picture").on("click", function() {
 $("#newButton").on("click", function(event) {
   event.preventDefault();
   //this line captures the user's input from the text box.
-  var newButton = $("#user-input")
-    .val()
-    .trim();
+  var newButton = $("#user-input").val().trim();
+  $(newButton).addClass("gifButton");
   //this line adds the user's input to the topics array
   topics.push(newButton);
   
   generateButtons();
 });
 
-}
+// });
