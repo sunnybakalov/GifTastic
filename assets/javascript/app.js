@@ -1,4 +1,4 @@
-// $(document).ready(function() {
+$(document).ready(function() {
 var topics = [
   "soccer",
   "football",
@@ -19,6 +19,7 @@ var topics = [
 
 //the function that generates our buttons
 function generateButtons() {
+    console.log("the generateButton function works?");
   //grabbing the Buttons div on the HTML page
   var buttonDiv = $("#buttons");
   //for loop that goes through the topics array and creates buttons
@@ -29,7 +30,7 @@ function generateButtons() {
     gifButton.text(topics[i]);
     $(".gifButton").append(gifButton);
   }
-}
+};
 
 generateButtons();
 
@@ -82,6 +83,7 @@ $(".picture").on("click", function() {
 
 //the function for the button that allows us to generate more buttons.
 $("#newButton").on("click", function(event) {
+    console.log("the newButton button actually registers");
   event.preventDefault();
   //this line captures the user's input from the text box.
   var newButton = $("#user-input").val().trim();
@@ -92,4 +94,4 @@ $("#newButton").on("click", function(event) {
   generateButtons();
 });
 
-// });
+});
