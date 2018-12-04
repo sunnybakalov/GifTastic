@@ -29,15 +29,13 @@ $(document).ready(function() {
       console.log(buttonDiv);
       // gifButton.append(buttonDiv);
       $("#buttons").append(gifButton);
-    }
+    };
 
     console.log("the generateButton function works?");
     //grabbing the Buttons div on the HTML page
     var buttonDiv = $("#buttons");
 
-    var input = $("#user-input")
-      .val()
-      .trim();
+    var input = $("#user-input").val().trim();
     var newButton = $("<button>");
     newButton.attr("id", input);
     newButton.attr("data-value", input);
@@ -110,6 +108,6 @@ $(document).ready(function() {
     topics.push(newButton);
     console.log(topics);
     console.log(newButton);
-    //   generateButtons();
+      generateButtons();
   });
 });
