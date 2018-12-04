@@ -19,19 +19,31 @@ var topics = [
 
 //the function that generates our buttons
 function generateButtons() {
-    console.log("the generateButton function works?");
-  //grabbing the Buttons div on the HTML page
-  var buttonDiv = $("#buttons");
   //for loop that goes through the topics array and creates buttons
   for (var i = 0; i < topics.length; i++) {
     console.log(gifButton);
-    var gifButton = $("<button></button>");
+    var gifButton = $("<button>");
     gifButton.addClass("gifButton");
     gifButton.attr("data-value", topics[i]);
     gifButton.html(topics[i]);
-    gifButton.append(buttonDiv);
     console.log(buttonDiv);
+    // gifButton.append(buttonDiv);
+    $("#buttons").append(gifButton);
   }
+
+  console.log("the generateButton function works?");
+  //grabbing the Buttons div on the HTML page
+  var buttonDiv = $("#buttons");
+
+  var input = $("#user-input").val();
+  var newButton = $("<button>");
+  newButton.attr("id", input);
+  newButton.attr("data-value", input);
+
+  newButton.html(input);
+
+  $("#buttons").append(newButton);
+
 };
 
 generateButtons();
@@ -94,7 +106,7 @@ $("#newButton").on("click", function(event) {
   topics.push(newButton);
   console.log(topics);
   console.log(newButton)
-  generateButtons();
+//   generateButtons();
 });
 
 });
