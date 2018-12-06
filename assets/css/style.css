@@ -5,8 +5,25 @@ body {
     padding: 1rem;
 }
 
+.container {
+    margin: 0 0 0 0;
+}
+
 #buttons {
-    width: 65%;
+    width: 75%;
+}
+
+button {
+    margin: 1%;
+}
+
+#btnGeneratingForm {
+    display: flex;
+    right: 0;
+    position: absolute;
+    top: 0;
+    padding-top: 1rem;
+    padding-right: 1rem;
 }
 
 #gifz {
@@ -16,5 +33,6 @@ body {
 	flex-wrap: wrap;
 	justify-content: space-around;
 	align-items: flex-start;
-	align-content: stretch;
+    align-content: stretch;
+    padding-top: 1rem;
 }
