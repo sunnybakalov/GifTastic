@@ -1,5 +1,8 @@
 body {
-    background: #2F2E2E;
+    background-image: url("../images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 3rem;
 }
 
 #buttons {
@@ -14,10 +17,4 @@ body {
 	justify-content: space-around;
 	align-items: flex-start;
 	align-content: stretch;
-}
-
-form {
-    display: flex;
-    right: 0;
-    top: 0;
 }
