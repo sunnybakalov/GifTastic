@@ -27,7 +27,7 @@ $(document).ready(function() {
       //for loop that goes through the topics array and creates buttons
       for (var i = 0; i < topics.length; i++) {
         console.log(gifButton); //undefined
-        var gifButton = $("<button>");
+        var gifButton = $("<button class='btn btn-info'>");
         gifButton.addClass("gifButton");
         gifButton.attr("data-value", topics[i]);
         gifButton.html(topics[i]);
