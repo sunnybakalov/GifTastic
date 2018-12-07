@@ -10,7 +10,7 @@ body {
 }
 
 #buttons {
-    width: 75%;
+    width: 80%;
 }
 
 button {
@@ -27,7 +27,7 @@ button {
 }
 
 #gifz {
-    width: 65%;
+    width: 100%;
     display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
