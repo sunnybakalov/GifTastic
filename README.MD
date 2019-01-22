@@ -1,13 +1,13 @@
 # GIFTASTIC
 Who doesn't love a good gif?!
 <p align="center">
-<img align="center" src="/assets/img/lebron.gif" width="100%"/>
+<img align="center" src="/assets/images/lebron.gif" width="100%"/>
 </p>
 
 ## SUMMARY
 Gifs make everyone happy and the sole purpose of this app is to create happiness. This app allows the user to view their favorite gifs by utilizing the Giphy API.
 <p align="center">
-<img align="center" src="/assets/img/shaq.gif" width="100%"/>
+<img align="center" src="/assets/images/shaq.gif" width="100%"/>
 </p>
 
 ## GOALS
