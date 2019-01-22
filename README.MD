@@ -1,13 +1,32 @@
-## GIFTASTIC ##
+# GIFTASTIC
+Who doesn't love a good gif?!
+<p align="center">
+<img align="center" src="/assets/img/lebron.gif" width="100%"/>
+</p>
 
-In this project, the user starts with a webpage that has some buttons displayed.
+## SUMMARY
+Gifs make everyone happy and the sole purpose of this app is to create happiness. This app allows the user to view their favorite gifs by utilizing the Giphy API.
+<p align="center">
+<img align="center" src="/assets/img/shaq.gif" width="100%"/>
+</p>
 
-When the user clicks on any of the buttons, 10 gifs that are related to that button's topic will populate on the screen in a "still" format.
+## GOALS
+* To provide the user with a good starting point of gif topics disguised as buttons.
+* To allow the user to populate gifs with a click of a button.
+* To allow the user to toggle between the animated and still status of a gif.
+* To allow the user to create their own working gif button that generates gifs of any topic of their choosing.
 
-The user can toggle between the "still" and the "animated" format of the gif by clicking on the gif.
+## DESIGN PROCESS
+* Use Bootstrap to create sections where the content is displayed.
+* Come up with an array of pre-determined button topics.
+* Create a form that takes in the users input to create a new button.
+* Display gifs once the user chooses a topic.
+* Allow the user to alternate between animated & still gifs.
 
-## More Buttons ##
+## TECHNOLOGY USED
+* jQuery
+* Bootstrap
 
-On the right side of the page, there is a text input form that allows the user to create their own gif generating button.
 
-After creating the new dynamic button, the user is able to click on that button and generate more gifs with the topic that they chose.
+## APIs
+* Giphy
